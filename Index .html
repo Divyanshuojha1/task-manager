@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="taskManager">
+
+        <!--HEADER-->
+        <header>
+            <h1>
+                Task Manager
+            </h1>
+        </header>
+
+        <!--ADD TASK-->
+        <section class="card">
+            <form id="taskForm" autocomplete="off">
+                <input type="text" id="taskInput" placeholder="Add a task..." required aria-label="Task Input">
+                <button type="submit">Add Task</button>
+            </form>
+            <p id="errorMessage" class="error-message"></p>
+        </section>
+
+        <!--FILTERS  -->
+        <section class="card filters">
+            <button data-filter="all" class="filter-btn active">All</button>
+            <button data-filter="completed" class="filter-btn">Completed</button>
+            <button data-filter="pending" class="filter-btn">Pending</button>
+            <button id="clearCompleted" class="clear-btn">Clear Completed</button>
+        </section>
+
+        <!-- TASK LIST -->
+        <section class="card">
+            <ul id="taskList"></ul>
+
+            <p id="emptyState" class="empty-state">
+                No tasks yet. Add one to get started
+            </p>
+        </section>
+
+        <!-- COUNTER  -->
+        <section class="card task-counter">
+            <div>Total: <strong id="totalCount">0</strong></div>
+            <div>Completed: <strong id="completedCount">0</strong></div>
+            <div>Remaining: <strong id="remainingCount">0</strong></div>
+        </section>
+
+    </main>
+
+    <!--EDIT MODAL -->
+    <div class="edit-modal" id="editModal" role="dialog" aria-modal="true">
+        <div class="edit-box">
+            <h3>Edit Task</h3>
+
+            <input type="text" id="editInput" placeholder="Update task...">
+
+            <div class="edit-actions">
+                <button type="button" id="cancelEdit">Cancel</button>
+                <button type="button" id="saveEdit">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

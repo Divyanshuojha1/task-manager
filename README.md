@@ -14,3 +14,7 @@ A fully responsive Task Manager application built using HTML, CSS, and JavaScrip
 - HTML5
 - CSS3
 - Vanilla JavaScript.
+
+## Live Demo
+
+**[Task  (https://divyanshuojha1.github.io/task-manager/)**
